@@ -137,7 +137,7 @@ h2 {
 }
 .promo .promo-bg {
   height: 628px;
-  background: url("../../images/bg.png") center no-repeat;
+  background: url("./images/bg.png") center no-repeat;
   background-size: contain;
 }
 @media screen and (max-width: 991px) {
