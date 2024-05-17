@@ -1,0 +1,423 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, p, h1, h2, h3, h4, h5, ul, a {
+  margin: 0;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*Сброс стилей окончен*/
+/*Настройка основных стилей*/
+:root {
+  --box-shadow: 0 0 35px rgba(12, 40, 54, 0.12);
+  --dark: #0C2836;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  color: var(--dark);
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 120%;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+}
+
+/*Конец настройки основных стилей*/
+/*Стили для навигации*/
+.navigation {
+  padding-top: 35px;
+  margin-bottom: 72px;
+}
+@media screen and (max-width: 576px) {
+  .navigation {
+    padding-top: 10px;
+  }
+}
+.navigation .navigation__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 576px) {
+  .navigation .navigation__wrap .navigation__logo {
+    width: 75px;
+  }
+}
+.navigation .navigation__list {
+  display: flex;
+  grid-gap: 39px;
+}
+@media screen and (max-width: 768px) {
+  .navigation .navigation__list {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-gap: 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navigation .navigation__list {
+    grid-gap: 5px;
+  }
+}
+.navigation .navigation__list .navigation__list-item {
+  width: 100%;
+}
+.navigation .navigation__list .navigation__list-item .navigation__list-item-link {
+  font-weight: 500;
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 18px;
+}
+@media screen and (max-width: 320px) {
+  .navigation .navigation__list .navigation__list-item .navigation__list-item-link {
+    font-size: 12px;
+  }
+}
+.navigation .navigation__list .navigation__list-item .navigation__list-item-link:hover {
+  text-decoration: underline;
+}
+
+/*Конец стилей для навигации*/
+/*Стили для главного блока*/
+.promo {
+  margin-bottom: 65px;
+}
+.promo p {
+  margin-bottom: 262px;
+}
+@media screen and (max-width: 991px) {
+  .promo p {
+    margin-bottom: 285px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .promo p {
+    margin-bottom: 25px;
+  }
+}
+.promo h1 span {
+  color: #FFA239;
+}
+.promo .promo-bg {
+  height: 628px;
+  background: url("../../images/bg.png") center no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 991px) {
+  .promo .promo-bg {
+    height: 670px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .promo .promo-bg {
+    background: none;
+    height: auto;
+  }
+}
+.promo .promo-bg .promo-bg-md {
+  display: none;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .promo .promo-bg .promo-bg-md {
+    display: block;
+    margin-bottom: 25px;
+  }
+}
+.promo .promo__list li {
+  display: flex;
+  align-items: baseline;
+  grid-gap: 12px;
+  margin-bottom: 8px;
+}
+.promo .promo__list li:last-child {
+  margin-bottom: 0px;
+}
+
+/*Конец стилей для главного блока*/
+/*Стили для блока инфо*/
+.info .info__content {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@media screen and (max-width: 810px) {
+  .info .info__content {
+    flex-direction: column;
+  }
+}
+.info .info__content .main__info-text a {
+  margin-right: 37px;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  font-size: 32px;
+  color: var(--dark);
+}
+@media screen and (max-width: 810px) {
+  .info .info__content .main__info-text a {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .info .info__content .main__info-text a {
+    font-size: 28px;
+  }
+}
+.info .info__content .main__info-text a:hover {
+  color: #FFA239;
+}
+@media screen and (max-width: 810px) {
+  .info .info__content .main__info-text {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+.info .info__content .main__info-card {
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 24px;
+  border-radius: 40px;
+}
+.info .info__content .main__info-card img {
+  margin: 15px 0px 30px 15px;
+}
+.info .info__content .main__info-card p {
+  width: 370px;
+  margin: 5px 40px 35px 30px;
+}
+@media screen and (max-width: 576px) {
+  .info .info__content .main__info-card p {
+    width: 100%;
+  }
+}
+
+/*Конец стилей для блока инфо*/
+/*Стили для блока проекты*/
+.projects {
+  margin-bottom: 100px;
+}
+.projects .projects__card img {
+  border-radius: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.projects .projects__card a {
+  font-weight: 600;
+  font-size: 18px;
+  color: #FFA239;
+  text-decoration: none;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.projects .projects__card a:hover {
+  text-decoration: underline;
+}
+
+/*Конец стилей для блока проекты*/
+/*Стили для блока технологии*/
+.tech {
+  margin-bottom: 94px;
+}
+.tech .row {
+  row-gap: 24px;
+}
+@media screen and (max-width: 576px) {
+  .tech .row {
+    row-gap: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .tech .row .col-6 {
+    padding: 0 5px;
+  }
+}
+.tech .tech__card {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  text-align: center;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 55px 87px 24px 87px;
+}
+.tech .tech__card .tech__card img {
+  margin-bottom: 18px;
+}
+.tech .tech__card .tech__card-name {
+  font-size: 18px;
+  color: #8A99A8;
+}
+
+/*Конец стилей для блока технологии*/
+/*Стили для блока обратная связь*/
+.feedback {
+  margin-bottom: 100px;
+}
+.feedback .feedback__text {
+  text-align: right;
+  margin-right: 37px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1199px) {
+  .feedback .feedback__text {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 40px;
+    display: block;
+  }
+}
+.feedback h2 {
+  margin-bottom: 0px;
+}
+.feedback p {
+  font-size: 24px;
+  margin-right: 8px;
+}
+@media screen and (max-width: 1199px) {
+  .feedback p {
+    text-align: center;
+    margin: 0px;
+  }
+}
+
+.form {
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 24px;
+  border-radius: 15px;
+}
+.form label {
+  display: block;
+}
+.form textarea, .form input {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid #788081;
+  border-radius: 10px;
+  min-height: 40px;
+  overflow: hidden;
+  outline: none;
+  width: 100%;
+}
+.form textarea::-moz-placeholder, .form input::-moz-placeholder {
+  color: #8A99A8;
+}
+.form textarea::placeholder, .form input::placeholder {
+  color: #8A99A8;
+}
+.form .form__group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 576px) {
+  .form .form__group {
+    flex-direction: column;
+  }
+}
+
+.button-primary {
+  background: linear-gradient(90deg, #F88501 -0.07%, #ffb703 100%);
+  padding: 9px 60px;
+  border-radius: 10px;
+  border: none;
+  transition: box-shadow 300ms, all 100ms;
+}
+@media screen and (max-width: 576px) {
+  .button-primary {
+    width: 100%;
+  }
+}
+.button-primary:focus {
+  transform: scale(0.95);
+}
+.button-primary:hover {
+  box-shadow: 0 0 10px 0 #ffb003;
+}
+
+/*Конец стилей для блока обратная связь*/
+/*Стили для футера*/
+.footer .footer__top {
+  margin-bottom: 14px;
+}
+@media screen and (max-width: 991px) {
+  .footer .footer__top img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer .footer__top .row {
+    row-gap: 24px;
+    align-items: center;
+  }
+}
+.footer .footer__top .footer__links {
+  text-align: center;
+}
+.footer .footer__top .footer__links .footer__links-item-link {
+  font-size: 24px;
+  color: var(--dark);
+}
+.footer .footer__top .footer__info {
+  text-align: right;
+}
+@media screen and (max-width: 991px) {
+  .footer .footer__top .footer__info {
+    text-align: center;
+  }
+}
+.footer .footer__copyright {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/*Конец стилей для футера*//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,59 @@
+/*Стили для блока инфо*/
+.info {
+   
+    .info__content {
+        margin-bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        @media screen and (max-width: 810px){
+            flex-direction: column;
+         }
+
+        .main__info-text a {
+            margin-right: 37px;
+            height: 100%;
+            display: flex;
+            justify-content: right;
+            font-size: 32px;
+            color: var(--dark);
+            @media screen and (max-width: 810px){
+                justify-content: center;
+             }
+             @media screen and (max-width: 576px){
+                font-size: 28px;
+             }
+            &:hover {
+                color: #FFA239;
+            }
+        }
+        .main__info-text {
+            @media screen and (max-width: 810px){
+                justify-content: center;
+                margin-bottom: 30px;
+             }
+        }
+
+        .main__info-card {
+            background: #fff;
+            box-shadow: var(--box-shadow);
+            padding: 24px;
+            border-radius: 40px;
+
+            img {
+                margin: 15px 0px 30px 15px;
+            }
+
+            p {
+                width: 370px;
+                margin: 5px 40px 35px 30px;
+                @media screen and (max-width: 576px){
+                    width: 100%;
+                 }
+            }
+        }
+    }
+}
+
+/*Конец стилей для блока инфо*/
